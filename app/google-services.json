@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "371657580505",
+    "firebase_url": "https://interticket-63aad-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "interticket-63aad",
+    "storage_bucket": "interticket-63aad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371657580505:android:9733cb0ee890228562c3c8",
+        "android_client_info": {
+          "package_name": "com.daurenbek.interticket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "371657580505-k0mnqn5tpfspo9j5l590drj4vkvnil9q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1GX_UOtoimXqoud3tKNkbfrXwkUjvDY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "371657580505-k0mnqn5tpfspo9j5l590drj4vkvnil9q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371657580505:android:e781423f3a079c2b62c3c8",
+        "android_client_info": {
+          "package_name": "com.jomqr.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "371657580505-k0mnqn5tpfspo9j5l590drj4vkvnil9q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1GX_UOtoimXqoud3tKNkbfrXwkUjvDY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "371657580505-k0mnqn5tpfspo9j5l590drj4vkvnil9q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

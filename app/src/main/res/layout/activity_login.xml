@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:fillViewport="true">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:foregroundTint="#882020">
+
+           <ImageView
+               android:id="@+id/imageView"
+               android:layout_width="@dimen/_150sdp"
+               android:layout_height="@dimen/_150sdp"
+               android:layout_marginTop="@dimen/_32sdp"
+               android:src="@drawable/qr"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintVertical_bias="0.0" />
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/textInputLayout2"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_16sdp"
+               android:layout_marginTop="@dimen/_32sdp"
+               android:layout_marginEnd="@dimen/_16sdp"
+               app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/imageView"
+               app:layout_constraintVertical_bias="0.0">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/txtUsername"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Email"
+                   android:inputType="textEmailAddress"
+                   android:textSize="@dimen/_15ssp" />
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/textInputLayout"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_16sdp"
+               android:layout_marginEnd="@dimen/_16sdp"
+               app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+               app:passwordToggleEnabled="true">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/txtPassword"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Password"
+                   android:inputType="textPassword"
+                   android:textSize="@dimen/_15ssp" />
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <Button
+               android:id="@+id/btnLogin"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_16sdp"
+               android:layout_marginTop="@dimen/_32sdp"
+               android:layout_marginEnd="@dimen/_16sdp"
+               android:background="@color/colorPrimary"
+               android:text="Login"
+               android:textColor="#FFFFFF"
+               android:textSize="@dimen/_11ssp"
+               app:layout_constraintBottom_toTopOf="@+id/btnForgotPassword"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+           <Button
+               android:id="@+id/btnForgotPassword"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_16sdp"
+               android:layout_marginEnd="@dimen/_16sdp"
+               android:backgroundTint="#E91E63"
+               android:text="Forgot your password?"
+               android:textColor="#F1EFEF"
+               android:textSize="@dimen/_11ssp"
+               app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+           <Button
+               android:id="@+id/btnRegister"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_16sdp"
+               android:layout_marginEnd="@dimen/_16sdp"
+               android:layout_marginBottom="@dimen/_32sdp"
+               android:text="Not a Member? Get registered in JomQR now!"
+               android:textSize="@dimen/_11ssp"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/btnForgotPassword" />
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

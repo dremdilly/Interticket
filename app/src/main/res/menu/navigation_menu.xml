@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuProfile"
+        android:title="Profile"
+        android:icon="@drawable/ic_account_box_black_24dp"
+        />
+    <item
+        android:id="@+id/menuWallet"
+        android:title="Wallet"
+        android:icon="@drawable/ic_credit_card_black_24dp"
+        />
+
+    <item
+        android:id="@+id/menuHistory"
+        android:title="History"
+        android:icon="@drawable/ic_history_black_24dp"
+        />
+
+    <item
+        android:id="@+id/menuScanner"
+        android:title="Buy"
+        android:icon="@drawable/ic_center_focus_strong_black_24dp"
+
+        />
+
+</menu>
