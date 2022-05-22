@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -35,8 +36,22 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private FirebaseAuth auth;
 
     @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            System.out.println("opening");
+//            openFragment(new BuyFragment());
+        }
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Bundle extras = getIntent().getExtras();
+
+
         setContentView(R.layout.activity_main);
         bnPrincipal = findViewById(R.id.bnPrincipal);
         ref = FirebaseDatabase.getInstance().getReference();
@@ -81,7 +96,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         walletFragment = new WalletFragment();
         historyFragment = new HistoryFragment();
         buyFragment = new BuyFragment();
+        if (extras != null) {
 
+            openFragment(new BuyFragment());
+        }
 
     }
 
