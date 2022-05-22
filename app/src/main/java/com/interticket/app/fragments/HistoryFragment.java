@@ -1,5 +1,6 @@
 package com.interticket.app.fragments;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -54,6 +55,7 @@ public class HistoryFragment extends Fragment {
         rvHistory.setAdapter(adapter);
 
         ref.child("History").child(auth.getCurrentUser().getUid()).addChildEventListener(new ChildEventListener() {
+            @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 historyList.add(dataSnapshot.getValue(History.class));
