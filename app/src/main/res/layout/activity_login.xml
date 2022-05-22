@@ -109,7 +109,7 @@
                android:layout_marginStart="@dimen/_16sdp"
                android:layout_marginEnd="@dimen/_16sdp"
                android:layout_marginBottom="@dimen/_32sdp"
-               android:text="Not a Member? Get registered in JomQR now!"
+               android:text="Not a Member? Get registered in Interticket now!"
                android:textSize="@dimen/_11ssp"
                app:layout_constraintBottom_toBottomOf="parent"
                app:layout_constraintEnd_toEndOf="parent"
