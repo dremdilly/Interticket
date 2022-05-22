@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class History implements Serializable {
 
-    private String amount, balance;
+    private String amount, balance, currentDate;
 
     public String getAmount() {
         return amount;
@@ -20,5 +20,13 @@ public class History implements Serializable {
 
     public void setBalance(String balance) {
         this.balance = balance;
+    }
+
+    public String getCurrentDate() {
+        return currentDate;
+    }
+
+    public void setCurrentDate(String currentDate) {
+        this.currentDate = currentDate;
     }
 }

@@ -16,6 +16,7 @@ import com.interticket.app.R;
 import com.interticket.app.fragments.TicketFragment;
 import com.interticket.app.models.History;
 
+import java.io.File;
 import java.util.List;
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHolder> {
@@ -41,6 +42,14 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
 
         holder.txtTitle.setText("A ticket was purchased for " + historyList.get(position).getAmount());
         holder.txtBalance.setText("Balance: " + historyList.get(position).getBalance());
+
+        String currentDate =historyList.get(position).getCurrentDate();
+        File file = new File( ((MainActivity) context).getFilesDir() + File.separator + "ticket_" + currentDate + ".txt");
+
+        if(!file.exists()) {
+            holder.itemView.setVisibility(View.GONE);
+        }
+
         holder.ticketCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

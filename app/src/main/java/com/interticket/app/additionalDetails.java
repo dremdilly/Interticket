@@ -71,7 +71,7 @@ public class additionalDetails extends AppCompatActivity {
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isComplete())
                             {
-                                Toast.makeText(getApplicationContext(),"Welcome to JOM QR!",Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),"Welcome to Interticket!",Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
                                 startActivity(intent);
                                 finish();

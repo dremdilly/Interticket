@@ -25,6 +25,12 @@ import com.interticket.app.MainActivity;
 import com.interticket.app.R;
 import com.interticket.app.models.History;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -78,14 +84,26 @@ public class BuyFragment extends Fragment {
 
                                         ref.child("Users").child(auth.getCurrentUser().getUid()).child
                                                 ("balance").setValue(String.valueOf(balance));
-
+                                        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss",
+                                                Locale.getDefault());
                                         history.setAmount(result.getText().trim());
                                         history.setBalance(String.valueOf(balance));
+                                        String currentDate = dateFormat.format(new Date());
+                                        history.setCurrentDate(currentDate);
 
 
                                         if (balance != currentAmount && balance < currentAmount) {
                                             ref.child("History").child(auth.getCurrentUser().getUid()).push().setValue(history);
                                             ((MainActivity) getActivity()).setAmount(String.valueOf(balance));
+
+                                            try {
+                                                File file = new File(getActivity().getFilesDir() + File.separator + "ticket_" + currentDate + ".txt");
+                                                file.createNewFile();
+                                                Toast.makeText(activity, "File saved", Toast.LENGTH_SHORT).show();
+                                            } catch (IOException e) {
+                                                e.printStackTrace();
+                                            }
+
                                             Toast.makeText(activity, "The payment is successful!", Toast.LENGTH_SHORT).show();
                                         } else {
                                             Toast.makeText(activity, "Balance is too low", Toast.LENGTH_SHORT).show();
