@@ -1,4 +1,4 @@
-package com.jomqr.app;
+package com.interticket.app;
 
 public class Users {
 

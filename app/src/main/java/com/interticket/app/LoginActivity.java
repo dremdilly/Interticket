@@ -1,4 +1,4 @@
-package com.jomqr.app;
+package com.interticket.app;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -60,11 +60,8 @@ public class LoginActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(LoginActivity.this, "Please fill all the fields", Toast.LENGTH_SHORT).show();
                 }
-
-
             }
         });
-
 
         btnForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,9 +76,6 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(RegisterActivity.class);
             }
         });
-
-
-
     }
 
     private void startActivity(Class activityClass){

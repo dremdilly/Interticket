@@ -1,4 +1,4 @@
-package com.jomqr.app.adapters;
+package com.interticket.app.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,8 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.jomqr.app.R;
-import com.jomqr.app.models.History;
+import com.interticket.app.R;
+import com.interticket.app.models.History;
 
 import java.util.List;
 

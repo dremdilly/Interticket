@@ -1,4 +1,4 @@
-package com.jomqr.app;
+package com.interticket.app;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,7 +7,6 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -19,10 +18,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.jomqr.app.fragments.BuyFragment;
-import com.jomqr.app.fragments.HistoryFragment;
-import com.jomqr.app.fragments.ProfileFragment;
-import com.jomqr.app.fragments.WalletFragment;
+import com.interticket.app.fragments.BuyFragment;
+import com.interticket.app.fragments.HistoryFragment;
+import com.interticket.app.fragments.ProfileFragment;
+import com.interticket.app.fragments.WalletFragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 

@@ -1,4 +1,4 @@
-package com.jomqr.app.fragments;
+package com.interticket.app.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,9 +18,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.jomqr.app.MainActivity;
-import com.jomqr.app.R;
-import com.jomqr.app.constants.Constants;
+import com.interticket.app.MainActivity;
+import com.interticket.app.R;
+import com.interticket.app.constants.Constants;
 
 public class WalletFragment extends Fragment {
     private TextView txtBalance;

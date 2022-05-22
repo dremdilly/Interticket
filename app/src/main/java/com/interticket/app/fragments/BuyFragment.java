@@ -1,4 +1,4 @@
-package com.jomqr.app.fragments;
+package com.interticket.app.fragments;
 
 
 import android.app.Activity;
@@ -21,9 +21,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.zxing.Result;
-import com.jomqr.app.MainActivity;
-import com.jomqr.app.R;
-import com.jomqr.app.models.History;
+import com.interticket.app.MainActivity;
+import com.interticket.app.R;
+import com.interticket.app.models.History;
 
 /**
  * A simple {@link Fragment} subclass.

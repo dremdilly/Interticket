@@ -1,4 +1,4 @@
-package com.jomqr.app;
+package com.interticket.app;
 
 import android.os.Bundle;
 import android.view.View;

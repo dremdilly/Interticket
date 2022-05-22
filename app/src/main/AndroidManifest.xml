@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jomqr.app">
+    package="com.interticket.app">
 
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -11,19 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".additionalDetails"></activity>
-        <activity android:name=".LoginActivity" />
+        <activity android:name="com.interticket.app.additionalDetails"></activity>
+        <activity android:name="com.interticket.app.LoginActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.interticket.app.MainActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".ForgotPasswordActivity"
+            android:name="com.interticket.app.ForgotPasswordActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".RegisterActivity"
+            android:name="com.interticket.app.RegisterActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name="com.interticket.app.SplashScreenActivity"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

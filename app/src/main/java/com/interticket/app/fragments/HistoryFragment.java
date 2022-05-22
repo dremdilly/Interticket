@@ -1,7 +1,5 @@
-package com.jomqr.app.fragments;
+package com.interticket.app.fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -21,9 +19,9 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.jomqr.app.R;
-import com.jomqr.app.adapters.HistoryAdapter;
-import com.jomqr.app.models.History;
+import com.interticket.app.R;
+import com.interticket.app.adapters.HistoryAdapter;
+import com.interticket.app.models.History;
 
 import java.util.ArrayList;
 import java.util.List;

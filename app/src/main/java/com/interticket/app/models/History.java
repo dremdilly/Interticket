@@ -1,4 +1,4 @@
-package com.jomqr.app.models;
+package com.interticket.app.models;
 
 import java.io.Serializable;
 
