@@ -4,4 +4,9 @@
         <attr name="appWidgetInnerRadius" format="dimension" />
         <attr name="appWidgetRadius" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="dt">
+        <attr name="bgc" format="color" />
+        <attr name="tC" format="color" />
+    </declare-styleable>
 </resources>

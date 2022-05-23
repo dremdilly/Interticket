@@ -6,6 +6,20 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="bgc">#ffffff</item>
+        <item name="tC">#000000</item>`
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>`
+    </style>
+
+    <style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#6ED1C7</item>
+        <item name="colorPrimaryDark">#068A78</item>
+        <item name="colorAccent">#BF396A</item>
+        <item name="bgc">#000000</item>
+        <item name="tC">#ffffff</item>
         `
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>`

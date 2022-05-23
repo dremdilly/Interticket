@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/bgc"
     tools:context=".fragments.BuyFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -39,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_16sdp"
             android:textSize="@dimen/_25ssp"
-            android:textColor="#000"
+            android:textColor="?attr/tC"
             android:text="Pay for your ticket"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -54,6 +55,7 @@
             android:layout_marginTop="@dimen/_16sdp"
             android:textSize="@dimen/_15ssp"
             android:text="Scan QR CODE"
+            android:textColor="?attr/tC"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

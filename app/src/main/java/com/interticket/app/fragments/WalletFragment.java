@@ -52,7 +52,7 @@ public class WalletFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     if(snapshot.getKey().equalsIgnoreCase("balance")){
-                        txtBalance.setText("RM " + snapshot.getValue());
+                        txtBalance.setText("Tenge " + snapshot.getValue());
                         amount = snapshot.getValue(String.class);
                         ((MainActivity)getActivity()).setAmount(amount);
                     }

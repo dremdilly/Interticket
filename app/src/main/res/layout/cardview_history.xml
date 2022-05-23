@@ -9,6 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="?attr/bgc"
         android:layout_height="wrap_content">
 
 
@@ -32,6 +33,7 @@
             android:layout_marginTop="@dimen/_16sdp"
             android:text="The ticket have been paid"
             android:textSize="@dimen/_13ssp"
+            android:textColor="?attr/tC"
             app:layout_constraintBottom_toTopOf="@+id/txtBalance"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -47,6 +49,7 @@
             android:layout_marginBottom="@dimen/_16sdp"
             android:textSize="@dimen/_10ssp"
             android:text="Balance : 100"
+            android:textColor="?attr/tC"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

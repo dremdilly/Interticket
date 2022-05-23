@@ -7,9 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -21,6 +25,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.interticket.app.LoginActivity;
+import com.interticket.app.MainActivity;
 import com.interticket.app.R;
 import com.interticket.app.Users;
 
@@ -35,6 +40,8 @@ public class ProfileFragment extends Fragment {
     private FirebaseUser user;
     private FirebaseAuth auth;
     private FirebaseAuth uid;
+    private Switch aSwitch;
+    private TextView textView;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -45,6 +52,7 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
 
         ref = FirebaseDatabase.getInstance().getReference();
 
@@ -61,6 +69,24 @@ public class ProfileFragment extends Fragment {
         etICNumber = view.findViewById(R.id.etICNumber);
         etPhoneNumber = view.findViewById(R.id.etPhoneNumber);
 
+        textView = view.findViewById(R.id.theme_label);
+        aSwitch = view.findViewById(R.id.mode);
+
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            aSwitch.setChecked(true);
+        }
+
+        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                }
+                reset();
+            }
+        });
 
         btnEdit = view.findViewById(R.id.btnEdit);
         btnSignOut = view.findViewById(R.id.btnSignOut);
@@ -133,6 +159,12 @@ public class ProfileFragment extends Fragment {
 
 
         return view;
+    }
+
+    private void reset() {
+        Intent intent = new Intent(getActivity().getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+        getActivity().finish();
     }
 
 }

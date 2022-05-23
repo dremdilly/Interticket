@@ -2,6 +2,7 @@ package com.interticket.app;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -47,6 +48,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            setTheme(R.style.DarkTheme);
+        } else {
+            setTheme(R.style.AppTheme);
+        }
         super.onCreate(savedInstanceState);
 
         Bundle extras = getIntent().getExtras();
@@ -99,6 +105,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         if (extras != null) {
 
             openFragment(new BuyFragment());
+            bnPrincipal.setSelectedItemId(R.id.menuScanner);
         }
 
     }
